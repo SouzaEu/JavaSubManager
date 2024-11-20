@@ -37,7 +37,7 @@ Este projeto é uma aplicação em Java para gerenciamento de usuários e assina
 
 1. **Clone o repositório:**
    bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone <(https://github.com/SouzaEu/GLOBAL-SOLUTION-JAVA-1TDSPK/)>
    
 
 2. **Instale as dependências (caso use Maven):**
