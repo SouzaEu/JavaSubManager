@@ -67,23 +67,24 @@ public class UsuarioDAO {
         return usuario;
     }
 
+    // Buscar usuário por email
     public Usuario buscarPorEmail(String email) throws SQLException {
-        String sql = "SELECT * FROM usuario WHERE email = ?";
+        String sql = "SELECT * FROM usuarios WHERE email = ?";
+        Usuario usuario = null;
         try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, email);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    Usuario usuario = new Usuario();
-                    usuario.setId(resultSet.getInt("id"));
-                    usuario.setNomeCompleto(resultSet.getString("nome_completo"));
-                    usuario.setEmail(resultSet.getString("email"));
-                    usuario.setSenha(resultSet.getString("senha"));
-                    return usuario;
+             PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    usuario = new Usuario();
+                    usuario.setId(rs.getInt("id"));
+                    usuario.setNomeCompleto(rs.getString("nome_completo"));
+                    usuario.setEmail(rs.getString("email"));
+                    usuario.setSenha(rs.getString("senha"));
                 }
             }
         }
-        return null;
+        return usuario;
     }
 
     // Listar todos os usuários

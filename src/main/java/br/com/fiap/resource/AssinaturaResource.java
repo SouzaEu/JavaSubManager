@@ -3,10 +3,10 @@ package br.com.fiap.resource;
 import br.com.fiap.bo.AssinaturaBO;
 import br.com.fiap.exception.AssinaturaNaoEncontradaException;
 import br.com.fiap.model.Assinatura;
-
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
 import java.sql.SQLException;
 
 @Path("/assinaturas")
@@ -14,6 +14,7 @@ public class AssinaturaResource {
 
     private AssinaturaBO assinaturaBO = new AssinaturaBO();
 
+    // Criar uma nova assinatura
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -26,6 +27,7 @@ public class AssinaturaResource {
         }
     }
 
+    // Buscar assinatura por ID de usuário
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -33,14 +35,19 @@ public class AssinaturaResource {
         try {
             Assinatura assinatura = assinaturaBO.buscarAssinaturaPorUsuarioId(id);
             if (assinatura == null) {
-                throw new AssinaturaNaoEncontradaException("Assinatura não encontrada.");
+                return Response.status(Response.Status.NOT_FOUND)
+                        .entity("{\"message\": \"Assinatura não encontrada.\"}")
+                        .build();
             }
             return Response.ok(assinatura).build();
-        } catch (SQLException | AssinaturaNaoEncontradaException e) {
-            return Response.status(Response.Status.NOT_FOUND).entity(e.getMessage()).build();
+        } catch (SQLException e) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity("{\"message\": \"Erro interno ao buscar assinatura.\"}")
+                    .build();
         }
     }
 
+// Atualizar assinatura
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -54,6 +61,7 @@ public class AssinaturaResource {
         }
     }
 
+    // Deletar assinatura
     @DELETE
     @Path("/{id}")
     public Response deletarAssinatura(@PathParam("id") int id) {

@@ -1,17 +1,14 @@
 package br.com.fiap.dao;
 
 import br.com.fiap.model.Assinatura;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AssinaturaDAO {
-
-    // Inserir uma nova assinatura no banco de dados
+    // Inserir assinatura
     public void inserir(Assinatura assinatura) throws SQLException {
         String sql = "INSERT INTO assinaturas (usuario_id, telefone, tipo_residencia, bairro, tipo_plano, opcao_manutencao) VALUES (?, ?, ?, ?, ?, ?)";
-
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, assinatura.getUsuarioId());
@@ -51,11 +48,10 @@ public class AssinaturaDAO {
         }
     }
 
-    // Buscar uma assinatura pelo ID
+    // Buscar assinatura por ID de usuário
     public Assinatura buscarPorId(int id) throws SQLException {
         String sql = "SELECT * FROM assinaturas WHERE id = ?";
         Assinatura assinatura = null;
-
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
