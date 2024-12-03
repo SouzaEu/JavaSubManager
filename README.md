@@ -1,4 +1,4 @@
-# 📁 Projeto Java Global Solution
+# 📁 Projeto Global Solution - FIAP
 
 ## 📝 Descrição
 
@@ -30,17 +30,17 @@ Este projeto é uma aplicação em Java para gerenciamento de usuários e assina
 - **Frameworks/Bibliotecas:**
   - Jersey (para API REST)
   - Grizzly (servidor HTTP)
-- **Banco de Dados:** Oracle
+- **Banco de Dados:** Oracle SQL
 - **Padrões e Arquitetura:** Domain Driven Design (DDD)
 
 ## 🚀 Configuração do Projeto
 
 1. **Clone o repositório:**
    bash
-   git clone <(https://github.com/SouzaEu/GLOBAL-SOLUTION-JAVA-1TDSPK/)>
+   git clone <(https://github.com/SouzaEu/EcoEnergy/)>
    
 
-2. **Instale as dependências (caso use Maven):**
+2. **Instale as dependências:**
    bash
    mvn install
    
