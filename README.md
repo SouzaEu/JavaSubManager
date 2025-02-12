@@ -55,6 +55,7 @@ This is a Java application for managing users and subscriptions. It applies **Do
 ## 📂 Package Structure
 
 /src/main/java/br/com/fiap
+
 │── bo/          # Business logic (validations, interactions between DAO and resources)
 │── dao/         # Database communication
 │── model/       # System entities (User, Subscription)
