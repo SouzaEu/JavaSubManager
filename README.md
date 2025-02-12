@@ -52,7 +52,7 @@ This is a Java application for managing users and subscriptions. It applies **Do
 
 
 
-##📂 Package Structure
+## 📂 Package Structure
 
 /src/main/java/br/com/fiap
 │── bo/          # Business logic (validations, interactions between DAO and resources)
