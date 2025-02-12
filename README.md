@@ -1,61 +1,65 @@
-# 📁 Gerenciador de Assinaturas
+# 📁 Subscription Manager
 
-## 📝 Descrição
+## 📝 Description
 
-Este projeto é uma aplicação em Java para gerenciamento de usuários e assinaturas. Utiliza conceitos de Domain Driven Design (DDD), API REST e manipulação de banco de dados. A aplicação permite o cadastro, autenticação e gerenciamento de usuários e assinaturas.
+This is a Java application for managing users and subscriptions. It applies **Domain-Driven Design (DDD)**, **REST API**, and **database handling**. The application allows user registration, authentication, and subscription management.
 
-## 🌟 Funcionalidades
+## 🌟 Features
 
-### 👤 Usuários:
-- Cadastro de novos usuários
-- Autenticação com email e senha
-- Atualização e exclusão de dados de usuário
+### 👤 Users:
+- Register new users
+- Authenticate using email and password
+- Update and delete user data
 
-### 📄 Assinaturas:
-- Registro de assinaturas vinculadas a usuários
-- Atualização e exclusão de assinaturas
+### 📄 Subscriptions:
+- Register subscriptions linked to users
+- Update and delete subscriptions
 
-### 🌐 API REST:
-- Endpoints para todas as operações de CRUD
-- Configuração de CORS para permitir requisições externas
+### 🌐 REST API:
+- Endpoints for all CRUD operations
+- CORS configuration to allow external requests
 
-### 💾 Banco de Dados:
-- Persistência de dados utilizando Oracle
-- Relacionamento entre as tabelas de Usuários e Assinaturas
+### 💾 Database:
+- Data persistence using **Oracle SQL**
+- Relationships between **Users** and **Subscriptions** tables
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 
-- **Linguagem:** Java
-- **Frameworks/Bibliotecas:**
-  - Jersey (para API REST)
-  - Grizzly (servidor HTTP)
-- **Banco de Dados:** Oracle SQL
-- **Padrões e Arquitetura:** Domain Driven Design (DDD)
+- **Language:** Java  
+- **Frameworks/Libraries:**  
+  - Jersey (for REST API)  
+  - Grizzly (HTTP server)  
+- **Database:** Oracle SQL  
+- **Patterns & Architecture:** Domain-Driven Design (DDD)  
 
-## 🚀 Configuração do Projeto
+## 🚀 Project Setup
 
-1. **Clone o repositório:**
-   bash
-   git clone <(https://github.com/SouzaEu/JavaSubManager/)>
-   
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/SouzaEu/JavaSubManager.git
 
-2. **Instale as dependências:**
-   bash
+2. **Install dependencies:**
+   ```sh
    mvn install
+
+3. **Set up the database:**
    
+   Create the tables in Oracle using the relational diagram provided in the project.
+   Configure the database credentials in the ConnectionFactory file.
 
-3. **Configure o banco de dados:**
-   - Crie as tabelas no Oracle conforme o diagrama relacional incluído no projeto.
-   - Ajuste as credenciais de conexão no arquivo `ConnectionFactory`.
+4. **Run the server:**
+   Compile the project and start the HTTP server using the Main class.
 
-4. **Execute o servidor:**
-   - Compile o projeto e inicie o servidor HTTP via classe `Main`.
 
-## 📂 Estrutura de Pacotes
 
-- `br.com.fiap.bo`: Contém a lógica de negócio do sistema, como validações e interações entre DAO e recursos.
-- `br.com.fiap.dao`: Responsável pela comunicação com o banco de dados.
-- `br.com.fiap.model`: Classes que representam as entidades do sistema (Usuário, Assinatura).
-- `br.com.fiap.resource`: Endpoints expostos via API REST.
-- `br.com.fiap.util`: Utilitários como conexão com o banco de dados e filtros.
+***📂 Package Structure
 
+/src/main/java/br/com/fiap
+│── bo/          # Business logic (validations, interactions between DAO and resources)
+│── dao/         # Database communication
+│── model/       # System entities (User, Subscription)
+│── resource/    # REST API endpoints
+│── util/        # Utilities (database connection, filters)
+
+
+   
