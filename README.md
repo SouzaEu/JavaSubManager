@@ -1,4 +1,4 @@
-# 📁 Projeto Global Solution - FIAP
+# 📁 Gerenciador de usuários e assinaturas
 
 ## 📝 Descrição
 
