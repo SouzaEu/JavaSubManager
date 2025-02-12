@@ -36,7 +36,7 @@ Este projeto é uma aplicação em Java para gerenciamento de usuários e assina
 
 1. **Clone o repositório:**
    bash
-   git clone <(https://github.com/SouzaEu/EcoEnergy/)>
+   git clone <(https://github.com/SouzaEu/JavaSubManager/)>
    
 
 2. **Instale as dependências:**
