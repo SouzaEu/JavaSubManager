@@ -1,4 +1,4 @@
-# 📁 Projeto Global Solution - FIAP
+# 📁 Gerenciador de Assinaturas
 
 ## 📝 Descrição
 
@@ -14,7 +14,6 @@ Este projeto é uma aplicação em Java para gerenciamento de usuários e assina
 ### 📄 Assinaturas:
 - Registro de assinaturas vinculadas a usuários
 - Atualização e exclusão de assinaturas
-- Cálculo de economia e impacto ambiental com hidrogênio verde
 
 ### 🌐 API REST:
 - Endpoints para todas as operações de CRUD
