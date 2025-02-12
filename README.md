@@ -1,8 +1,8 @@
-# 📁 Gerenciador de usuários e assinaturas
+# 📁 Projeto Global Solution - FIAP
 
 ## 📝 Descrição
 
-Este projeto é uma aplicação em Java para gerenciamento de usuários e assinaturas. Utiliza conceitos de Domain Driven Design (DDD), API REST e manipulação de banco de dados. A aplicação permite o cadastro, autenticação e gerenciamento de usuários e assinaturas, além de incluir cálculos relacionados à economia de custos com hidrogênio verde.
+Este projeto é uma aplicação em Java para gerenciamento de usuários e assinaturas. Utiliza conceitos de Domain Driven Design (DDD), API REST e manipulação de banco de dados. A aplicação permite o cadastro, autenticação e gerenciamento de usuários e assinaturas.
 
 ## 🌟 Funcionalidades
 
