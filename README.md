@@ -54,13 +54,11 @@ This is a Java application for managing users and subscriptions. It applies **Do
 
 ## 📂 Package Structure
 
-/src/main/java/br/com/fiap
-
-│── bo/          # Business logic (validations, interactions between DAO and resources)
-│── dao/         # Database communication
-│── model/       # System entities (User, Subscription)
-│── resource/    # REST API endpoints
-│── util/        # Utilities (database connection, filters)
+- **`br.com.fiap.bo`**: Contains the business logic of the system, such as validations and interactions between DAO and resources.
+- **`br.com.fiap.dao`**: Handles communication with the database.
+- **`br.com.fiap.model`**: Classes representing the system entities (e.g., `User` and `Subscription`).
+- **`br.com.fiap.resource`**: Endpoints exposed via REST API.
+- **`br.com.fiap.util`**: Utilities, such as database connection and filters.
 
 
    
